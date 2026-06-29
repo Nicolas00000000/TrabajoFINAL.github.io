@@ -45,6 +45,7 @@ html, body {
 }
 body {
   cursor: none;
+  background-color: #00a6ff;
   background-image: url("/img/Assets/remplazobody2.png");
 }
 
