@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Uso Bootstrap 5.3-->
+    <!--Tener en cuenta equilibrio BST y CSS-->
+    <!--Datos Base-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!--------------------------------------------------------------------->
+    <!--Barra de Navegacion-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5" href="index.html">Nova Propiedades</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-5 gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="propiedades.html">Propiedades</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="empresa.html">Empresa</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<!--------------------------------------------------------------------->
+<div id="cursor"></div>
+<!----->
+<audio id="bgMusic" loop>
+    <source src="sounds/principal/principalbackground.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-controls">
+    <button id="playBtn">
+        <i class="fa-solid fa-play"></i>
+    </button>
+
+    <button id="pauseBtn">
+        <i class="fa-solid fa-pause"></i>
+    </button>
+</div>
+
+
+<!----------------------------------------------------------------------->
+<!--Carrousel-->
+<div id="carouselExample" class="container-fluid w-100 carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/Carrousel (1).jpg" class="CarrouselImg" alt="...">
+      <div class="carousel-caption">
+        <div class="fondo"></div>
+        <div class="contenido-texto">
+        <h5>Encontrá el lugar que siempre soñaste</h5>
+        <p >Tu nuevo hogar te espera con nosotros.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/Carrousel (2).jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/Carrousel (3).jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--------------------------------------------------------------------->
+<!--Container-->
+<div class="container mt-5" >
+    <div class="row mb-4 g-0">
+        <div class="col-7" id="boxone"><H1>Tu nuevo hogar te espera</H1><p class="pInicio">Buscamos y seleccionamos propiedades que se adaptan a tus necesidades: casas, departamentos y terrenos en ubicaciones ideales. Te ayudamos a encontrar ese lugar especial donde construir tus momentos más importantes.
+Ya sea que busques tu primer hogar, una inversión o simplemente un cambio, contamos con una amplia variedad de opciones para que elijas con confianza. Nos enfocamos en brindarte calidad, comodidad y una experiencia positiva en todo el proceso.</p>
+        <!--<button type="button" class="btn btn-light mt-1"  id="buttonCard">Primary</button>--></div>
+        <div class="col-5 containerImg1"><img src="img/Assets/img1.jpeg" class="imgInicio" alt=""></div>
+        
+    </div>
+    <div class="row mb-4 g-0">
+       <div class="col-5 containerImg2"><img src="img/Assets/img2.jpeg" class="imgInicio" alt=""></div>
+        <div class="col-7" id="boxtwo"><H1>Asesoramiento integral y confiable
+</H1><p class="pInicio">Te acompañamos en todo el proceso, desde la búsqueda hasta la firma. Brindamos asesoría legal, tasaciones reales y gestión de trámites para que puedas comprar, vender o alquilar con total tranquilidad.</p>
+        </div>
+    </div>
+    <div class="row mb-4 g-0">
+        <div class="col-7" id="boxone"><H1>Hablemos sobre tu próxima propiedad</H1><p class="pInicio">Contanos qué estás buscando y te ayudamos a encontrarlo. Estamos disponibles por WhatsApp, mail o en nuestras oficinas. Dar el primer paso es fácil, y estamos para acompañarte.
+Nuestro equipo está preparado para brindarte atención personalizada, responder tus dudas y mostrarte oportunidades únicas según tus preferencias. Porque cada persona tiene una historia distinta, y nuestro compromiso es ayudarte a escribir la tuya en el lugar ideal.</p>
+        </div>
+        <div class="col-5 containerImg1"><img src="img/Assets/img3.jpeg" class="imgInicio" alt=""></div>
+    </div>
+</div>
+<!--------------------------------------------------------------------->
+<div class="container ">
+  <h1 class="text-center mb-4 titulo h1White">Ofertas</h1>
+</div>
+<!--Tarjetas/modelo extraido de bootstrap-->
+<!--IMPORTANTE desde bootstrap ya se exportan las configuraciones para los botones, tube que usar "!important" para hacer que se impongan mis configuraciones-->
+<div class="container ">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+      <img src="img/Carrousel (1).jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+      <p class="card-text">Casa en Palermo, un hogar unico, un lugar de paz.</p>
+      <a href="detalle.html?id=1"><button type="button" class="btn btn-primary" id="buttonCard">Primary</button></a>
+      </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+      <img src="img/Carrousel (2).jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+      <p class="card-text">Departamento en Belgrano, dias increibles aqui.</p>
+      <a href="detalle.html?id=2"><button type="button" class="btn btn-primary"  id="buttonCard">Primary</button></a>
+      </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+      <img src="img/Carrousel (3).jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+      <p class="card-text">PH en Caballito, cada dia mas brillante que el anterior</p>
+      <a href="detalle.html?id=3"><button type="button" class="btn btn-primary"  id="buttonCard">Primary</button></a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+<!--Imagenes Publicitarias--->
+  <div class="containera"><img src="img/publicidad/2.png" class="containerPublicidad"></div>
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+<!--Pie de pagina, eh notado que se encima sobre todo y siempre esta rpesente (se soluciona quitando "fixed")-->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-secondary">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Empresa -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase mb-3 fw-bold text-white">Nova Propiedades</h5>
+                <p class="text-white-50 small">
+                    Especialistas en compra, venta, alquiler y tasación de inmuebles. 
+                    Más de 15 años acompañando a familias e inversores en la búsqueda de oportunidades inmobiliarias.
+                </p>
+                <p class="mb-1 small"><strong class="text-white">CUIT:</strong> 30-12345678-9</p>
+                <p class="mb-0 small"><strong class="text-white">Matrícula:</strong> CPI 2547</p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase mb-3 fw-bold text-white">Contacto</h5>
+                <ul class="list-unstyled text-white-50 small">
+                    <li class="mb-2">
+                        <i class="bi bi-geo-alt-fill me-2 text-primary"></i>Av. Illia 1250, San Luis
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone-fill me-2 text-primary"></i><a href="tel:+542664441234" class="text-decoration-none text-reset link-light">266 444-1234</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-whatsapp me-2 text-success"></i><a href="https://wa.me/5492665556789" target="_blank" class="text-decoration-none text-reset link-light">266 555-6789</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-envelope-fill me-2 text-primary"></i><a href="mailto:contacto@novapropiedades.com" class="text-decoration-none text-reset link-light">contacto@novapropiedades.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Servicios -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="text-uppercase mb-3 fw-bold text-white">Servicios</h5>
+                <ul class="list-unstyled text-white-50 small">
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-reset link-light">Compra</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-reset link-light">Venta</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-reset link-light">Alquileres</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-reset link-light">Tasaciones</a></li>
+                    <li class="mb-2"><a href="#" class="text-decoration-none text-reset link-light">Administración</a></li>
+                </ul>
+            </div>
+
+            <!-- Horarios y Redes -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase mb-3 fw-bold text-white">Atención</h5>
+                <div class="text-white-50 small mb-3">
+                    <p class="mb-1 fw-bold text-white">Lunes a Viernes</p>
+                    <p class="mb-0">09:00 - 13:00 | 16:00 - 20:00</p>
+                </div>
+
+                <hr class="border-secondary">
+
+                <h6 class="text-uppercase mb-2 fw-bold small text-white">Redes Sociales</h6>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white-50 link-light" title="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white-50 link-light" title="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#" class="text-white-50 link-light" title="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- Fin Row -->
+
+        <!-- Copyright -->
+        <div class="text-center pt-3 mt-4 border-top border-secondary text-white-50 small">
+            &copy; 2026 Nova Propiedades | Todos los derechos reservados
+        </div>
+    </div> <!-- Fin Container -->
+</footer>
+<!--------------------------------------------------------------------->
+<!--Scripts IMPORTANTES (siempre al final)-->
+    <script src="js/main.js"></script>
+    <script type="module" src="js/iaGeminis.js"></script>
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--------------------------------------------------------------------->
+</body>
+</html>
+<!--RICKARD JOAQUIN NICOLAS-->
+<!--DNI:39395009-->
