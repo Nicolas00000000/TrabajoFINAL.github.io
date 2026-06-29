@@ -44,9 +44,7 @@ html, body {
  
 }
 body {
-  background:
-    linear-gradient(#ffffff00 0%, #0e1323 100%),
-    url("/img/Assets/Body2.jpg") center/cover no-repeat fixed;
+  background-image: url("/img/Assets/Body2.jpg");
 }
 
 
