@@ -44,16 +44,9 @@ html, body {
  
 }
 body {
-  cursor: none;
-  background-image: linear-gradient(
-    #ffffff00 0%,
-    #0e1323 100%
-  ),
-  url('/img/Assets/Body2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background:
+    linear-gradient(#ffffff00 0%, #0e1323 100%),
+    url("img/Assets/Body2.jpg") center/cover no-repeat fixed;
 }
 
 
